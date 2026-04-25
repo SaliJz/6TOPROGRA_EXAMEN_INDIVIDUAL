@@ -1,0 +1,2 @@
+C:\Users\NITRO\source\repos\6toProgra_Examen_Invididual\6toProgra_Examen_Invididual\obj\Debug\6toProgra_Examen_Invididual.csproj.AssemblyReference.cache
+C:\Users\NITRO\source\repos\6toProgra_Examen_Invididual\6toProgra_Examen_Invididual\obj\Debug\6toProgra_Examen_Invididual.csproj.CoreCompileInputs.cache
