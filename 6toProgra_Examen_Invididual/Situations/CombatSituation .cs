@@ -12,8 +12,7 @@ namespace _6toProgra_Examen_Invididual.Situations
     {
         private readonly Enemy enemy;
 
-        public CombatSituation(string id, string title, string narrative, Enemy enemy)
-            : base(id, title, narrative)
+        public CombatSituation(string id, string title, string narrative, Enemy enemy) : base(id, title, narrative)
         {
             this.enemy = enemy;
         }
