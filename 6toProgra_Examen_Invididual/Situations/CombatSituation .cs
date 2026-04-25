@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _6toProgra_Examen_Invididual.Characters;
+using _6toProgra_Examen_Invididual.Combat;
 
 namespace _6toProgra_Examen_Invididual.Situations
 {
