@@ -14,14 +14,19 @@ namespace _6toProgra_Examen_Invididual
         public int MaxHP { get; private set; }
         public int CurrentHP { get; private set; }
         public int Damage { get; private set; }
+        public string Sprite { get; private set; }
+        public List<Item> LootTable { get; private set; }
         public bool IsAlive => CurrentHP > 0;
 
-        public Enemy(string name, int hp, int damage)
+        public Enemy(string name, int hp, int damage, string sprite, List<Item> loot)
         {
             Name = name;
             MaxHP = hp;
             CurrentHP = hp;
             Damage = damage;
+            Sprite = sprite;
+            if (loot != null) LootTable = loot;
+            else LootTable = new List<Item>();
         }
 
         public int TakeDamage(int amount)
