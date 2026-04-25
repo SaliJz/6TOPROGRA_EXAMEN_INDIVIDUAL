@@ -19,8 +19,18 @@ namespace _6toProgra_Examen_Invididual.Situations
 
         public override void Play(GameContext context)
         {
+            ConsoleHelper.WriteSectionTitle(Title);
             Console.WriteLine(Narrative);
             Console.WriteLine();
+
+            CombatEngine combatEngine = new CombatEngine();
+            bool playerWon = combatEngine.StartBattle(context.Player, enemy);
+
+            if (!playerWon)
+            {
+                context.GameOver = true;
+                return;
+            }
 
             foreach (var item in enemy.GetLoot())
             {

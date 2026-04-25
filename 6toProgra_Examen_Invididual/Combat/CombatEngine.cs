@@ -22,6 +22,18 @@ namespace _6toProgra_Examen_Invididual.Combat
                 Console.WriteLine("1. Attack");
                 Console.WriteLine("2. Use item");
 
+                int choice = ConsoleHelper.ReadOption(1, 2);
+
+                if (choice == 1)
+                {
+                    enemy.TakeDamage(player.Damage);
+                    Console.WriteLine("Atacas a {0} y causas {1} de daño.", enemy.Name, player.Damage);
+                }
+                else
+                {
+                    UseInventoryItem(player, enemy);
+                }
+
                 if (enemy.IsAlive)
                 {
                     player.TakeDamage(enemy.Damage);
@@ -30,6 +42,25 @@ namespace _6toProgra_Examen_Invididual.Combat
             }
 
             return player.IsAlive;
+        }
+
+        private void UseInventoryItem(Player player, Enemy enemy)
+        {
+            if (!player.Inventory.Any())
+            {
+                Console.WriteLine("No tienes ítems. Pierdes el turno.");
+                return;
+            }
+
+            for (int i = 0; i < player.Inventory.Count; i++)
+            {
+                Console.WriteLine("{0}. {1}", i + 1, player.Inventory[i].Name);
+            }
+
+            int option = ConsoleHelper.ReadOption(1, player.Inventory.Count);
+            Item item = player.Inventory[option - 1];
+            item.Use(player, enemy);
+            Console.WriteLine("Usaste: " + item.Name);
         }
     }
 }

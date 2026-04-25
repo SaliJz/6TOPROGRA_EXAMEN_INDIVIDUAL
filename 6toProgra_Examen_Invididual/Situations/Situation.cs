@@ -23,6 +23,7 @@ namespace _6toProgra_Examen_Invididual.Situations
 
         public virtual void Play(GameContext context)
         {
+            ConsoleHelper.WriteSectionTitle(Title);
             Console.WriteLine(Narrative);
             Console.WriteLine();
 
@@ -32,6 +33,18 @@ namespace _6toProgra_Examen_Invididual.Situations
             {
                 Console.WriteLine("{0}. {1}", i + 1, availableOptions[i].Description);
             }
+
+            int selectedIndex = ConsoleHelper.ReadOption(1, availableOptions.Count) - 1;
+            SituationOption selectedOption = availableOptions[selectedIndex];
+
+            context.Player.ChoiceHistory.Push(Id + ":" + selectedOption.Description);
+
+            if (selectedOption.Consequence != null)
+            {
+                selectedOption.Consequence(context);
+            }
+
+            context.CurrentSituationId = selectedOption.NextSituationId;
         }
     }
 }
