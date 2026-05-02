@@ -15,7 +15,7 @@ namespace _6toProgra_Examen_Invididual.Characters
         public Queue<Item> RewardQueue { get; private set; }
 
         public int Morality { get; set; }
-        public int Courage { get; set; }
+        //public int Courage { get; set; }
 
         public Player(string name) : base(name, 100, 12)
         {
@@ -24,7 +24,7 @@ namespace _6toProgra_Examen_Invididual.Characters
             ChoiceHistory = new Stack<string>();
             RewardQueue = new Queue<Item>();
             Morality = 0;
-            Courage = 0;
+            //Courage = 0;
         }
 
         public void AddItem(Item item)

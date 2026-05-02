@@ -17,9 +17,9 @@ namespace _6toProgra_Examen_Invididual
         public void Run()
         {
             Console.Clear();
-            Console.WriteLine("=====================");
-            Console.WriteLine("    LA ÚLTIMA PUERTA ");
-            Console.WriteLine("=====================");
+            Console.WriteLine("====================");
+            Console.WriteLine("  LA ÚLTIMA PUERTA  ");
+            Console.WriteLine("====================");
             Console.Write("Ingresa tu nombre: ");
             string name = Console.ReadLine();
 
@@ -95,7 +95,7 @@ namespace _6toProgra_Examen_Invididual
                 Description = "Ir hacia las ruinas (requiere valor)",
                 Consequence = ctx =>
                 {
-                    ctx.Player.Courage++;
+                    //ctx.Player.Courage++;
                     Console.WriteLine("Avanzas con determinación hacia las ruinas.");
                 },
                 NextSituationId = "old_man_request"
@@ -106,7 +106,7 @@ namespace _6toProgra_Examen_Invididual
                 Description = "Ir hacia el río con cautela",
                 Consequence = ctx =>
                 {
-                    ctx.Player.Morality++;
+                    //ctx.Player.Morality++;
                     Console.WriteLine("Eliges el camino más seguro. La prudencia también es valentía.");
                 },
                 NextSituationId = "river_chest"
@@ -333,7 +333,7 @@ namespace _6toProgra_Examen_Invididual
                 Consequence = ctx =>
                 {
                     ctx.Player.Heal(10);
-                    ctx.Player.Courage++;
+                    //ctx.Player.Courage++;
                     Console.WriteLine("Un espíritu amistoso te guía y restaura parte de tu vida (+10 HP).");
                 },
                 NextSituationId = "guardian_knight"
