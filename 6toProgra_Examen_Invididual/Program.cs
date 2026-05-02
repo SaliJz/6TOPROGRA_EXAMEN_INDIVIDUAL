@@ -21,6 +21,7 @@ namespace _6toProgra_Examen_Invididual
                 Console.Write("¿Deseas volver a intentarlo? (y/n): ");
                 string input = Console.ReadLine();
 
+                // Valida la entrada para asegurarse de que sea "y" o "n"
                 playAgain = !string.IsNullOrWhiteSpace(input) &&
                             input.Trim().Equals("y", StringComparison.OrdinalIgnoreCase);
             }

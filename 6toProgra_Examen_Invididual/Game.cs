@@ -61,6 +61,7 @@ namespace _6toProgra_Examen_Invididual
         {
             List<Situation> all = new List<Situation>
             {
+                // Total de situaciones: 10
                 BuildIntroCrossroads(),
                 BuildOldManRequest(),
                 BuildRiverChest(),
