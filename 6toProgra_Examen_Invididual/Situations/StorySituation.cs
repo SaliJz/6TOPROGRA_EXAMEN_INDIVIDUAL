@@ -10,7 +10,7 @@ namespace _6toProgra_Examen_Invididual.Situations
     {
         public StorySituation(string id, string title, string narrative) : base(id, title, narrative)
         {
-
+            // No se necesita lógica adicional
         }
     }
 }

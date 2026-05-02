@@ -19,8 +19,8 @@ namespace _6toProgra_Examen_Invididual.Combat
                 Console.WriteLine();
                 Console.WriteLine("{0} - HP: {1}/{2} | DMG: {3}", player.Name, player.Health, player.MaxHealth, player.Damage);
                 Console.WriteLine("{0} - HP: {1}/{2} | DMG: {3}", enemy.Name, enemy.Health, enemy.MaxHealth, enemy.Damage);
-                Console.WriteLine("1. Attack");
-                Console.WriteLine("2. Use item");
+                Console.WriteLine("1. Atacar");
+                Console.WriteLine("2. Usar ítem");
 
                 int choice = ConsoleHelper.ReadOption(1, 2);
 

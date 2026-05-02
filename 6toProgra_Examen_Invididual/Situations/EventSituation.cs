@@ -10,13 +10,13 @@ namespace _6toProgra_Examen_Invididual.Situations
     {
         public EventSituation(string id, string title, string narrative) : base(id, title, narrative)
         {
-
+            // No se necesita lógica adicional
         }
 
         public override void Play(GameContext context)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("[EVENTO]");
+            Console.WriteLine("\n[EVENTO]");
             Console.ResetColor();
 
             base.Play(context);

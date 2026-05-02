@@ -20,7 +20,9 @@ namespace _6toProgra_Examen_Invididual.Situations
 
         public override void Play(GameContext context)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             ConsoleHelper.WriteSectionTitle(Title);
+            Console.ResetColor();
             Console.WriteLine(Narrative);
             Console.WriteLine();
 

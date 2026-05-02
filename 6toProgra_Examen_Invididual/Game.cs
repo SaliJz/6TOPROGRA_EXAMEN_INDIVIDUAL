@@ -51,7 +51,7 @@ namespace _6toProgra_Examen_Invididual
         private void ShowEnding()
         {
             Console.WriteLine();
-            ConsoleHelper.WriteSectionTitle("FIN DE LA AVENTURA");
+            ConsoleHelper.WriteSectionTitle("\nFIN DE LA AVENTURA");
             EndingResolver resolver = new EndingResolver();
             Console.WriteLine(resolver.Resolve(context));
             Console.WriteLine();
@@ -92,7 +92,7 @@ namespace _6toProgra_Examen_Invididual
 
             s.Options.Add(new SituationOption
             {
-                Description = "Ir hacia las ruinas (requiere valor)",
+                Description = "Ir hacia las ruinas",
                 Consequence = ctx =>
                 {
                     //ctx.Player.Courage++;
@@ -106,7 +106,7 @@ namespace _6toProgra_Examen_Invididual
                 Description = "Ir hacia el río con cautela",
                 Consequence = ctx =>
                 {
-                    //ctx.Player.Morality++;
+                    ctx.Player.Morality++;
                     Console.WriteLine("Eliges el camino más seguro. La prudencia también es valentía.");
                 },
                 NextSituationId = "river_chest"
